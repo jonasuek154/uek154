@@ -55,9 +55,6 @@
 				<version>0.27.2</version>
 				<configuration>
 					<verbose>true</verbose>
-					<!-- authConfig>
-						<username>michaelhauck</username>
-					</authConfig-->
 					<images>
 						<image>
 							<name>jsc/crm-web</name>
@@ -73,6 +70,21 @@
 						</image>
 					</images>
 				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>mydeploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
