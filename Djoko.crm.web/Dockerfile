@@ -6,6 +6,6 @@ EXPOSE 7070
 
 WORKDIR /usr/local/bin
 
-COPY /target/Djoko.crm.web-0.0.1-SNAPSHOT-shaded.jar webapp.jar
+COPY ./target/Djoko.crm.web-0.0.1-SNAPSHOT-shaded.jar webapp.jar
 
 CMD ["java", "-jar", "webapp.jar"]
